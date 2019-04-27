@@ -1,0 +1,6 @@
+<h2>{{character.name}} Details</h2>
+<span>Data goes here </span>
+<div *ngIf="Character">
+  <span>Yeah</span>
+  <div [[(ngModel)]]="character.str" placeholder="name"></div>
+</div>
