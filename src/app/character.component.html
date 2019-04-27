@@ -1,6 +1,14 @@
 <h2>{{character.name}} Details</h2>
-<span>Data goes here </span>
+STR: {{character.str.value}}<br/>
+INT: {{character.int}}<br/>
+WIS: {{character.wis}}<br/>
+DEX: {{character.dex}}<br/>
+CON: {{character.con}}<br/>
+CHR: {{character.chr}}
 <div *ngIf="Character">
   <span>Yeah</span>
-  <div [[(ngModel)]]="character.str" placeholder="name"></div>
+  <div *ngFor="let proficiency of character.proficiencies">
+    <span>x</span>
+    <span>{{proficiency.type}}</span>
+  </div>
 </div>
